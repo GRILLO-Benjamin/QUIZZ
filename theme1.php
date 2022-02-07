@@ -1,1 +1,1 @@
-theme1.php
+theme 1 choisis
