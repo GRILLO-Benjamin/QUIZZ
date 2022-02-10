@@ -5,20 +5,20 @@ class Players{
         this.playerCounter = 1;
     }
 
-    addPlayer(name){
+    addPlayer(pseudo){
         let player = {
             id: this.playerCounter++,
-            name: name,
+            pseudo: pseudo,
             score: []
         }
         return this.players.push(player)
     }
 
-    totalScore(playerId){
+    totalScore(user_id){
         return this.score.reduce((a,b)=>a+b);
     }
 
-    currentQuestionScore(playerId){
+    currentQuestionScore(user_id){
         this.players.indexOf({id:player})
         return this.score[this.score.length-1]
     }

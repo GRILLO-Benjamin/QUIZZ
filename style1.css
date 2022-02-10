@@ -6,8 +6,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.bg_image{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 body {
     background: #2c3e50;
+    
 }
 ::selection {
     color: #fff;

@@ -9,10 +9,10 @@ module.exports ={
     let newPin = Math.floor(Math.random() * 9000, 10000)
     return newPin;
   }, 
-  addPlayer:(name, id) => {
+  addPlayer:(pseudo, id) => {
     let player = {
         id: id,
-        name: name,
+        pseudo: pseudo,
         score: 0,
         qAnswered: false,
         answeredCorrect: false
@@ -22,9 +22,9 @@ module.exports ={
     players = newPlayers;
     return players
   },
-  submitAnswer:(name, answer) => {
-    let player = players.filter(player => player.name === name);
-    let updatedPlayers = players.filter(player => player.name !== name);
+  submitAnswer:(pseudo, answer) => {
+    let player = players.filter(player => player.pseudo === pseudo);
+    let updatedPlayers = players.filter(player => player.pseudo !== pseudo);
     
     player[0].qAnswered = true;
     answer === questions[0].correctanswer
