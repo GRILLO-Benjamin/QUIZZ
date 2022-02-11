@@ -42,20 +42,25 @@ $answers = $bdd->query('SELECT * FROM answers WHERE question_id <= 20');
                             </div>
                         </div>
                         <form action="../QUIZZ/test.php" method="POST" name="questions">
-                            <div class="form-group">
+                            <div class="form-group" style="font-size:2vw;">
                                 <ul>
                                     <?php while ($q = $questions->fetch()) { ?>
                                         <li><?= $q['id'] ?> : <?= $q['question_content'] ?></li>
+                                        <br>
                                         <ul>
-                                            <?php while ($r = $answers->fetch()) { 
-                                                if($q['id'] == $r['question_id']){ ?>
-                                                <li><?= $r['id'] ?> : <?= $r['answer_content'] ?></li>
-                                            <?php }}?>
+                                            <?php while ($r = $answers->fetch()) {
+                                                if ($q['id'] == $r['question_id']) { ?>
+                                                    <div class="col-md-12">
+                                                        <button type="button"  name="question" class="btn mybtn btn-primary "><?= $r['answer_content'] ?></button>
+                                                    </div>
+                                            <?php }
+                                            } ?>
                                         </ul>
                                         <br>
-                                        <div class="col-md-12 text-center ">
-                                <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Continuer</button>
-                                    <?php } ?>
+                                        <div class="col-md-12">
+                                            <button type="submit" name="submit" onclick="" class=" btn btn-block mybtn btn-primary tx-tfm">Continuer</button>
+                                        <?php } ?>
+                                        </div>
                                 </ul>
                             </div>
                         </form>
@@ -64,7 +69,7 @@ $answers = $bdd->query('SELECT * FROM answers WHERE question_id <= 20');
             </div>
         </div>
     </div>
-
+<script src="http://php-project.loc/QUIZZ/js/test.js"></script>
 </body>
 
 </html>
