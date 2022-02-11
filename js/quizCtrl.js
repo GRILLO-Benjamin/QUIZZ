@@ -29,9 +29,9 @@ module.exports = {
             .catch(err => res.status(500).send(err))
     },
     addQuestion: (req, res) => {
-        let { id, question, answer1, answer2, answer3, answer4, correctAnswer } = req.body;
+        let { id, question, answer1, answer2, answer3, correctAnswer } = req.body;
         const db = req.app.get('db');
-        db.add_question([id, question, answer1, answer2, answer3, answer4, correctAnswer])
+        db.add_question([id, question, answer1, answer2, answer3, correctAnswer])
             .then(() => res.status(200).send())
             .catch(err => res.status(500).send(err))
     },
@@ -50,9 +50,9 @@ module.exports = {
             .catch(err => res.status(500).send(err))
     },
     updateQuestion: (req, res) => {
-        let { id, question, answer1, answer2, answer3, answer4, correctAnswer } = req.body;
+        let { id, question, answer1, answer2, answer3, correctAnswer } = req.body;
         const db = req.app.get('db');
-        db.update_question([id, question, answer1, answer2, answer3, answer4, correctAnswer])
+        db.update_question([id, question, answer1, answer2, answer3, correctAnswer])
             .then(result => res.status(200).send(result))
             .catch(err => res.status(500).send(err))
     },

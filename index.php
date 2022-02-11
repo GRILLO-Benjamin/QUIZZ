@@ -1,6 +1,6 @@
 <?php
 include './header.php';
- ?>
+?>
 
  <body>
 <img class="bg_image" src="./img/bg_image.jpg">
