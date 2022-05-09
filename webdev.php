@@ -12,8 +12,8 @@ try {
 }
 // recuperation de toutes les donnees de la table questions
 
-$questions = $bdd->query('SELECT * FROM questions WHERE theme_id = 1 ORDER BY RAND() LIMIT 1');
-$answers = $bdd->query('SELECT * FROM answers WHERE question_id <= 20');
+$questions = $bdd->query('SELECT * FROM questions WHERE theme_id = 2 ORDER BY RAND() LIMIT 1');
+$answers = $bdd->query('SELECT * FROM answers WHERE question_id > 20 and question_id <= 40');
 
 ?>
 <!DOCTYPE html>
@@ -41,7 +41,7 @@ $answers = $bdd->query('SELECT * FROM answers WHERE question_id <= 20');
                                 <h1>questions</h1>
                             </div>
                         </div>
-                        <form action="../QUIZZ/test.php" method="POST" name="questions">
+                        <form action="../QUIZZ/webdev.php" method="POST" name="questions">
                             <div class="form-group" style="font-size:2vw;">
                                 <ul>
                                     <?php while ($q = $questions->fetch()) { ?>

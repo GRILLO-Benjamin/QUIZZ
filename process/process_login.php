@@ -2,7 +2,7 @@
 if (isset($_POST['pseudo'])) {
     //connexion bdd 
     try {
-        $pdo = new PDO('mysql:host=127.0.0.1;dbname=Quizz;charset=utf8','root','', [
+        $pdo = new PDO('mysql:host=141.94.22.233;dbname=Quizz;charset=utf8','root','', [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]);
     } catch (\Throwable $th) {
@@ -13,7 +13,7 @@ if (isset($_POST['pseudo'])) {
     $isSuccess =  $pdostmnt->execute(array($_POST['pseudo']));
 
     if ($isSuccess) {
-        header('Location: ../index.php?success=Le pseudo à bien été ajouté !');    
+        header('Location: ../themes.php?success=Le pseudo à bien été ajouté !');    
     } else {
         header('Location: ../login.php?error=Erreur lors de l\'enregistrement du pseudo !');    
     }
@@ -22,4 +22,3 @@ if (isset($_POST['pseudo'])) {
 } else {
     header('Location: ../login.php?error=Le formulaire n\'est pas valide !');    
 }
-?>

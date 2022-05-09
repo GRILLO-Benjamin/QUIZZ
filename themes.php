@@ -17,15 +17,15 @@ include './header.php';
                                 <h1>Selection des themes</h1>
                             </div>
                         </div>
-                        <form action="../QUIZZ/test.php" method="POST" name="themes">
+                        <form action="" method="POST" name="themes">
                             <div class="form-group">
-                            <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">THEME 1 : Mangas</button>     
+                            <a href="../QUIZZ/manga.php"><button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">THEME 1 : Mangas</button></a>     
                        </div>
                        <div class="form-group">
-                            <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">THEME 2 : WEB DEV</button>     
+                            <a href="../QUIZZ/webdev.php"><button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">THEME 2 : WEB DEV</button></a>     
                        </div>
                        <div class="form-group">
-                            <button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">THEME 2 : Culture Générale</button>     
+                            <a href="../QUIZZ/culture.php"><button type="submit" name="submit" class=" btn btn-block mybtn btn-primary tx-tfm">THEME 2 : Culture Générale</button></a>     
                        </div>
                         </form>
                     </div>
