@@ -4,7 +4,7 @@ include './header.php';
 <?php
 //connexion bdd 
 try {
-    $bdd = new PDO('mysql:host=127.0.0.1;dbname=Quizz;charset=utf8', 'root', '', [
+    $bdd = new PDO('mysql:host=141.94.22.233;dbname=Quizz;charset=utf8', 'root', '', [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]);
 } catch (\Throwable $th) {
@@ -51,7 +51,7 @@ $answers = $bdd->query('SELECT * FROM answers WHERE question_id <= 20');
                                             <?php while ($r = $answers->fetch()) {
                                                 if ($q['id'] == $r['question_id']) { ?>
                                                     <div class="col-md-12">
-                                                        <button type="button"  name="question" class="btn mybtn btn-primary "><?= $r['answer_content'] ?></button>
+                                                        <button type="button" name="question" class="btn mybtn btn-primary "><?= $r['answer_content'] ?></button>
                                                     </div>
                                             <?php }
                                             } ?>
@@ -69,7 +69,7 @@ $answers = $bdd->query('SELECT * FROM answers WHERE question_id <= 20');
             </div>
         </div>
     </div>
-<script src="http://php-project.loc/QUIZZ/js/test.js"></script>
+    <script src="http://php-project.loc/QUIZZ/js/test.js"></script>
 </body>
 
 </html>
